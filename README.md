@@ -1,5 +1,7 @@
 # Meta Fácil - Sistema de Gerenciamento de Conteúdo para Redes Sociais
 
+<!-- Deploy trigger: 2025-01-27 -->
+
 ## 📋 Descrição
 
 Meta Fácil é um sistema completo de gerenciamento de conteúdo para redes sociais, com foco especial em publicações no Telegram. O sistema permite criar, agendar, publicar e analisar o desempenho de conteúdos em múltiplas plataformas.
