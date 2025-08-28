@@ -1,0 +1,3 @@
+-- Esta migração já foi aplicada através do schema.prisma
+-- O Prisma irá gerar automaticamente as migrações necessárias
+-- Esta é apenas uma migração de placeholder para manter o histórico
