@@ -2,7 +2,7 @@
 FROM node:18-slim AS base
 
 # Install dependencies only when needed
-FROM base AS deps
+FROM node:18-slim AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -10,7 +10,7 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 # Rebuild the source code only when needed
-FROM base AS builder
+FROM node:18-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -22,7 +22,7 @@ RUN npx prisma generate
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM base AS runner
+FROM node:18-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
